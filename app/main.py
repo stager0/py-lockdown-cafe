@@ -16,9 +16,9 @@ def go_to_cafe(friends: list, cafe: Cafe) -> str | None:
         else:
             not_exception += 1
 
-    if no_vaccine > 0:
+    if no_vaccine:
         return "All friends should be vaccinated"
     elif not_exception == len(friends):
         return f"Friends can go to {cafe.name}"
-    elif masks_to_buy > 0:
+    elif masks_to_buy:
         return f"Friends should buy {masks_to_buy} masks"
